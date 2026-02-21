@@ -1,5 +1,6 @@
 "use client";
 
+import { keepPreviousData } from "@tanstack/react-query";
 import { useMemo, useState, useCallback, useEffect } from "react";
 
 import dayjs from "@calcom/dayjs";
@@ -86,7 +87,7 @@ const AdminCalendarView = () => {
       limit: 500,
     },
     {
-      keepPreviousData: true,
+      placeholderData: keepPreviousData,
     }
   );
 

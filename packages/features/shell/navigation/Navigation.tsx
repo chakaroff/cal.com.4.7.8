@@ -100,6 +100,14 @@ const navigation: NavigationItemType[] = [
       },
     ],
   },
+  {
+    name: "Аdmin calendar",
+    href: "/settings/admin/calendar",
+    icon: "calendar",
+    onlyAdmin: true,
+    onlyDesktop: true,
+    isCurrent: ({ pathname: path }) => path?.startsWith("/settings/admin/calendar") ?? false,
+  },
 ];
 
 const platformNavigation: NavigationItemType[] = [
